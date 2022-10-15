@@ -10,11 +10,15 @@ function App() {
     setCount (previousCount => previousCount-1)
 
    }
+
+   function incrementCount(){
+    setCount (previousCount => previousCount+1)
+   }
   return (
    <>
    <button onClick={decrementCount}>-</button>
    <span>{count}</span>
-   <button>+</button>
+   <button onClick={incrementCount}>+</button>
   </>
   )
 }
