@@ -1,26 +1,25 @@
-import React, { useState } from "react";
 import "./App.css";
-
-function countInitial() {
-  console.log('run function')
-  return 4
-}
+import React, { useState } from "react";
 
 function App() {
-  const [count, setCount] = useState(() => countInitial())
+  const [state, setState] = useState({count:4,theme:'blue'})
+  const count = state.count
+  const theme = state.theme
+ 
 
   function decrementCount() {
-    setCount((previousCount) => previousCount - 1)
-    setCount((previousCount) => previousCount - 1)
+    //setCount(previousCount => previousCount - 1)
+  
   }
 
   function incrementCount() {
-    setCount((previousCount) => previousCount + 1)
+   // setCount(previousCount => previousCount + 1)
   }
   return (
     <>
       <button onClick={decrementCount}>-</button>
       <span>{count}</span>
+      <span>{theme}</span>
       <button onClick={incrementCount}>+</button>
     </>
   );
