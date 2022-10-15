@@ -2,18 +2,20 @@ import "./App.css";
 import React, { useState } from "react";
 
 function App() {
-  const [state, setState] = useState({count:4,theme:'blue'})
-  const count = state.count
-  const theme = state.theme
- 
+  const [count , setCount] = useState(4)
+  const [theme, setTheme] = useState('blue')
 
   function decrementCount() {
-    //setCount(previousCount => previousCount - 1)
-  
-  }
+    setCount(previousCount => previousCount - 1)
 
+   
+    }
+  
   function incrementCount() {
-   // setCount(previousCount => previousCount + 1)
+ 
+    setCount(previousCount => previousCount + 1)
+    setTheme('red')
+ 
   }
   return (
     <>
